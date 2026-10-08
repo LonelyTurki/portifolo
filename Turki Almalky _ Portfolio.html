@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Turki Almalky | IT Graduate</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ECEEF5;--ink:#12142B;--mute:#555A78;--blue:#3346F0;--mint:#12A981;--card:#FFFFFF;--line:#D5D9E8;--soft:#E1E5F6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10122A;--ink:#EEF0FB;--mute:#9EA3C4;--blue:#8E9BFF;--mint:#3DDCB0;--card:#181B3A;--line:#2A2E58;--soft:#1E2246}}
+:root[data-theme="dark"]{--bg:#10122A;--ink:#EEF0FB;--mute:#9EA3C4;--blue:#8E9BFF;--mint:#3DDCB0;--card:#181B3A;--line:#2A2E58;--soft:#1E2246}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;font-size:17px}
+h1,h2,h3,.logo{font-family:"Bricolage Grotesque","IBM Plex Sans Arabic",system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-weight:800;font-size:20px}
+nav{display:flex;gap:22px;align-items:center;font-size:15px}
+nav a{color:var(--mute);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.seg{display:flex;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px}.seg button{font:inherit;font-size:14px;font-weight:700;border:0;background:transparent;color:var(--mute);padding:6px 16px;border-radius:999px;cursor:pointer}.seg button.on{background:var(--blue);color:#fff}:root[data-theme="dark"] .seg button.on{color:#10122A}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg button.on{color:#10122A}}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(40px,6.4vw,74px);line-height:1.04;margin:0 0 22px;font-weight:800;letter-spacing:-.025em}
+.hero .name{color:var(--blue);font-weight:700;font-size:18px;margin:0 0 14px}
+.hero p.lead{color:var(--mute);font-size:19px;max-width:48ch;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:500;font-size:16px}
+.btn.main{background:var(--blue);color:#fff}
+:root[data-theme="dark"] .btn.main{color:#10122A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.main{color:#10122A}}
+.btn.alt{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 24px 60px -30px rgba(51,70,240,.45)}
+.panel .top{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);margin-bottom:16px}
+.panel .count{font-family:"Bricolage Grotesque",sans-serif;font-size:44px;font-weight:800;line-height:1;color:var(--ink)}
+.panel .count small{font-size:18px;color:var(--mute);font-weight:500}
+.seats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0 14px;direction:ltr}
+.seat{aspect-ratio:1;border-radius:8px;background:var(--soft);transition:background .5s,box-shadow .5s}
+.seat.on{background:var(--mint);box-shadow:0 0 0 3px var(--card),0 0 0 5px var(--mint)}
+.panel .note{font-size:13px;color:var(--mute);margin:0}
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2{font-size:32px;margin:0 0 30px;font-weight:800;letter-spacing:-.01em}
+.xp{display:grid;grid-template-columns:200px 1fr;gap:30px}
+.xp .when{color:var(--mute);font-size:15px}
+.xp h3{margin:0;font-size:22px}
+.xp .org{color:var(--blue);margin:2px 0 14px;font-weight:500}
+ul{margin:0;padding-inline-start:20px}
+li{margin-bottom:8px;color:var(--mute)}
+.feature{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;margin-bottom:20px}
+.feature h3,.card h3{margin:0 0 4px;font-size:25px}
+.feature .meta,.card .meta{color:var(--mute);font-size:14px;margin:0 0 14px}
+.feature .about{font-size:18px;margin:0 0 18px;max-width:62ch}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.stack span,.sk span{background:var(--soft);border-radius:6px;padding:4px 12px;font-size:14px}
+.sk{margin-bottom:22px}
+.sk h3{font-size:17px;margin:0 0 10px;color:var(--mute);font-weight:500}
+.sk div{display:flex;flex-wrap:wrap;gap:8px}
+.sk span{font-size:15px;padding:6px 14px;background:var(--card);border:1px solid var(--line)}
+.certs li{color:var(--ink)}
+.certs em{color:var(--mute);font-style:normal;font-size:15px}
+.contact{text-align:start}
+.contact h2{font-size:clamp(32px,5vw,52px);max-width:16ch}
+.contact p{color:var(--mute);max-width:46ch;margin:0 0 26px}
+footer{padding:28px 0 44px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){.hero,.xp,.split{grid-template-columns:1fr}.xp{gap:6px}nav a{display:none}}
+@media (prefers-reduced-motion:reduce){.seat{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<span class="logo">TA</span>
+<nav>
+<a href="#experience" data-ar="الخبرة">Experience</a>
+<a href="#projects" data-ar="المشاريع">Projects</a>
+<a href="#skills" data-ar="المهارات">Skills</a>
+<a href="#contact" data-ar="تواصل">Contact</a>
+<div class="seg" role="group" aria-label="Language"><button type="button" data-l="en" class="on">EN</button><button type="button" data-l="ar">AR</button></div>
+</nav>
+</header>
+
+<main>
+<div class="hero">
+<div>
+<p class="name" data-ar="تركي المالكي">Turki Almalky</p>
+<h1 data-ar="تطبيقات جوال وذكاء اصطناعي، والعمل التقني خلفها.">Mobile apps, AI, and the IT work behind them.</h1>
+<p class="lead" data-ar="خريج تقنية معلومات من جامعة الإمام محمد بن سعود الإسلامية، ومتدرب في إدارة تقنية المعلومات بشركة لومي. أبحث عن وظيفة بدوام كامل في مجال تقنية المعلومات.">IT graduate from Imam Muhammad bin Saud Islamic University and a trainee in Enterprise Management IT at Lumi Rental. Looking for a full-time IT role.</p>
+<div class="btns">
+<a class="btn main" href="#contact" data-ar="تواصل معي">Get in touch</a>
+<a class="btn alt" href="#projects" data-ar="شاهد المشاريع">See projects</a>
+</div>
+</div>
+<div class="panel" aria-label="Live lab occupancy demo from My Campus">
+<div class="top"><span data-ar="مختبر ٣ · بث مباشر">Lab 3 · live</span><span data-ar="تحديث كل ٥ ثوانٍ">updates every 5 s</span></div>
+<div class="count"><span id="n">11</span><small> / 24</small></div>
+<div class="seats" id="seats"></div>
+<p class="note" data-ar="عرض توضيحي لفكرة مشروع تخرجي My Campus، حيث تعد كاميرا YOLOv8 الأشخاص وتحدّث الحالة في Firebase.">A demo of the idea behind My Campus: a YOLOv8 camera counts people and updates Firebase.</p>
+</div>
+</div>
+
+<section id="experience">
+<h2 data-ar="الخبرة">Experience</h2>
+<div class="xp">
+<div class="when" data-ar="أغسطس ٢٠٢٦ – ديسمبر ٢٠٢٦">Aug 2026 – Dec 2026</div>
+<div>
+<h3 data-ar="متدرب تعاوني في تقنية المعلومات">IT Cooperative Trainee</h3>
+<p class="org" data-ar="لومي لتأجير السيارات · إدارة تقنية المعلومات للمؤسسة، الرياض">Lumi Rental · Enterprise Management IT, Riyadh</p>
+<ul>
+<li data-ar="تعلمت العمل على منصة Freshservice لإدارة الخدمات والطلبات بين الإدارات.">Learned the Freshservice ITSM platform for departmental service and request management.</li>
+<li data-ar="حللت طلبات التطبيقات وسير العمل وتكامل الأنظمة داخل الإدارة.">Analyzed application requests, workflows, and system integrations.</li>
+<li data-ar="أعددت مخططات UML توضح كيف ترتبط التطبيقات والأنظمة ببعضها.">Created UML workflows and process diagrams showing how applications and systems connect.</li>
+<li data-ar="جمعت المتطلبات من أصحاب العلاقة وناقشتها وسلمتها للموردين.">Captured requirements from stakeholders, then discussed and delivered them to vendors.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 data-ar="المشاريع">Projects</h2>
+<div class="feature">
+<h3>My Campus</h3>
+<p class="meta" data-ar="مشروع التخرج · ديسمبر ٢٠٢٥ – مايو ٢٠٢٦">Graduation project · Dec 2025 – May 2026</p>
+<p class="about" data-ar="منصة جوال موحدة بصلاحيات حسب الدور لحجز القاعات ومراقبة إشغال المختبرات والتواصل داخل المؤسسة الأكاديمية.">A unified, role-based mobile platform for hall reservations, lab occupancy monitoring, and campus communication.</p>
+<ul>
+<li data-ar="الرؤية الحاسوبية: خدمة Python/Flask تعالج إطارات الكاميرا بنموذج YOLOv8 وتعد الأشخاص لحظياً وتحدّث Firestore كل ٥ ثوانٍ.">Computer vision: a Python/Flask service runs YOLOv8 on webcam frames, counts people in real time, and syncs occupancy to Firestore every 5 seconds.</li>
+<li data-ar="مساعد ذكي بـ Gemini 2.5 Flash يقرأ ويكتب في Firestore، فيجيب عن الأسئلة وينفذ الحجوزات بلغة طبيعية.">A Gemini 2.5 Flash assistant with read/write access to Firestore answers data questions and books rooms from natural language.</li>
+<li data-ar="نظام حجز يمنع التعارض، وإشعارات حسب اهتمامات المقررات، وخرائط حرارية للإشغال، ورسائل فورية بالوسائط.">A conflict-aware booking engine, course-interest notifications, AI-generated occupancy heatmaps, and real-time messaging with media.</li>
+</ul>
+<div class="stack"><span>Flutter / Dart</span><span>Firebase</span><span>Gemini API</span><span>YOLOv8</span><span>Python</span><span>Flask</span><span>OpenCV</span><span>REST APIs</span></div>
+</div>
+<div class="split">
+<div class="card">
+<h3>Food Roover</h3>
+<p class="meta" data-ar="يناير ٢٠٢٥ – أبريل ٢٠٢٥">Jan 2025 – Apr 2025</p>
+<ul>
+<li data-ar="تطبيق ويب متكامل بـ PHP وMySQL للبحث عن عربات الطعام بالاسم أو الموقع أو نوع المطبخ.">Full-stack PHP/MySQL web app to search food trucks by name, location, or cuisine.</li>
+<li data-ar="بحث آمن باستخدام Prepared Statements لمنع حقن SQL.">Secure search with prepared statements to prevent SQL injection.</li>
+<li data-ar="تسجيل دخول وإدارة جلسات للعملاء والمشرفين، وحساب تلقائي لمتوسط التقييم.">Authentication and sessions for customers and admins, plus automatic average ratings.</li>
+</ul>
+<div class="stack"><span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span></div>
+</div>
+<div class="card">
+<h3 data-ar="الشهادات والدورات">Courses &amp; certifications</h3>
+<p class="meta" data-ar="تعلم مستمر">Ongoing learning</p>
+<ul class="certs">
+<li>Data Science Bootcamp <em>· OSS Vision Community · Apr 2026</em></li>
+<li>Technical Support Fundamentals <em>· Google · Sep 2025</em></li>
+<li>Introduction to Bug Bounty Hunting <em>· Technation Club · Dec 2024</em></li>
+<li>How to Use Git <em>· Technation Club · Dec 2024</em></li>
+<li>The Impact of AI on Cybersecurity <em>· Taif University · Nov 2024</em></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<h2 data-ar="المهارات">Skills</h2>
+<div class="sk"><h3 data-ar="تقنية">Technical</h3><div><span>Java</span><span>PHP</span><span>SQL / MySQL</span><span>HTML5</span><span>CSS3</span><span>Python</span><span>Flask</span><span>Flutter / Dart</span><span>Firebase</span><span>OpenCV</span><span>REST APIs</span><span>Git</span><span>Freshservice</span><span>Freshdesk</span></div></div>
+<div class="sk"><h3 data-ar="مهنية">Professional</h3><div><span data-ar="إدارة أصحاب العلاقة والموردين">Stakeholder &amp; vendor management</span><span data-ar="توثيق متطلبات الأعمال">Business requirements documentation</span><span data-ar="نمذجة العمليات بـ UML">UML process modeling</span><span data-ar="القيادة">Leadership</span><span data-ar="العمل الجماعي">Teamwork</span><span>Microsoft Office</span></div></div>
+<div class="sk"><h3 data-ar="اللغات">Languages</h3><div><span data-ar="العربية: لغة أم">Arabic: native</span><span data-ar="الإنجليزية: متوسط">English: intermediate</span></div></div>
+<p style="color:var(--mute);margin:30px 0 0" data-ar="التعليم: بكالوريوس تقنية المعلومات، جامعة الإمام محمد بن سعود الإسلامية، الرياض (٢٠٢٢ – ٢٠٢٦).">Education: B.Sc. in Information Technology, Imam Muhammad bin Saud Islamic University, Riyadh (2022 – 2026).</p>
+</section>
+
+<section id="contact" class="contact">
+<h2 data-ar="لنتحدث عن دورك القادم في فريقك.">Let's talk about the role on your team.</h2>
+<p data-ar="أنا متاح لوظيفة تقنية بدوام كامل في الرياض. أرسل لي رسالة وسأرد عليك بسرعة.">I'm available for a full-time IT role in Riyadh. Send a message and I'll reply quickly.</p>
+<div class="btns">
+<a class="btn main" href="mailto:talmalky124@gmail.com">talmalky124@gmail.com</a>
+<a class="btn alt" href="https://wa.me/966578001032" data-ar="واتساب">WhatsApp</a>
+<a class="btn alt" href="tel:+966578001032" dir="ltr">+966 57 800 1032</a>
+</div>
+</section>
+</main>
+<footer data-ar="الرياض، المملكة العربية السعودية">Riyadh, Saudi Arabia</footer>
+</div>
+
+<script>
+(function(){
+var els=document.querySelectorAll('[data-ar]');
+els.forEach(function(e){e.setAttribute('data-en',e.textContent)});
+var segs=document.querySelectorAll('.seg button');
+function set(l){
+document.documentElement.lang=l;
+document.documentElement.dir=l==='ar'?'rtl':'ltr';
+els.forEach(function(e){e.textContent=e.getAttribute('data-'+l)});
+segs.forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===l)});
+try{localStorage.setItem('lang',l)}catch(x){}
+}
+segs.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-l'))})});
+try{if(localStorage.getItem('lang')==='ar')set('ar')}catch(x){}
+
+var box=document.getElementById('seats'),n=document.getElementById('n'),seats=[];
+for(var i=0;i<24;i++){var s=document.createElement('div');s.className='seat';box.appendChild(s);seats.push(s)}
+function draw(c){
+var idx=seats.map(function(_,i){return i}).sort(function(){return Math.random()-.5});
+seats.forEach(function(s){s.classList.remove('on')});
+idx.slice(0,c).forEach(function(i){seats[i].classList.add('on')});
+n.textContent=c;
+}
+draw(11);
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+setInterval(function(){draw(6+Math.floor(Math.random()*15))},5000);
+}
+})();
+</script>
+</body>
+</html>
